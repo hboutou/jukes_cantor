@@ -1,7 +1,7 @@
 import re, math
 
 def distance (seq1, seq2):
-	# Jukes Cantor distance formula: (-3/4)ln[1-p*(4/3)]
+    # Jukes Cantor distance formula: (-3/4)ln[1-p*(4/3)]
     p = percent_difference_of_nucleotides(seq1, seq2)
     return -0.75 * math.log(1 - (p*4/3)) if p else 0
 
